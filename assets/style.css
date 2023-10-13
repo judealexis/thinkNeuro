@@ -1,26 +1,26 @@
 @font-face {
     font-family: think;
-    src: url("/Users/judealexis/labWork/thinkNeuro/assets/analogue65medium.ttf");
+    src: url("https://github.com/judealexis/thinkNeuro/blob/main/assets/analogue65medium.ttf");
 }
 
 @font-face {
     font-family: thinkLight;
-    src: url("/Users/judealexis/labWork/thinkNeuro/assets/analogue35thin.ttf");
+    src: url("https://github.com/judealexis/thinkNeuro/blob/main/assets/analogue35thin.ttf");
 }
 
 @font-face {
     font-family: thinkP;
-    src: url("/Users/judealexis/labWork/thinkNeuro/assets/analogue55regular.ttf");
+    src: url("https://github.com/judealexis/thinkNeuro/blob/main/assets/analogue55regular.ttf");
 }
 
 @font-face {
     font-family: thinkPs;
-    src: url("/Users/judealexis/labWork/thinkNeuro/assets/analogue45light.ttf");
+    src: url("https://github.com/judealexis/thinkNeuro/blob/main/assets/analogue45light.ttf");
 }
 
 @font-face {
     font-family: thinkHard;
-    src: url("/Users/judealexis/labWork/thinkNeuro/assets/analogue75bold.ttf");
+    src: url("https://github.com/judealexis/thinkNeuro/blob/main/assets/analogue75bold.ttf");
 }
 
 .body1 { grid-area: top; }
