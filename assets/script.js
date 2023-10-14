@@ -26,7 +26,6 @@ function fitContent(){
 
   const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
-  //1792
 
   for (let i = 0; i < learnMore.length; i++) {
     
