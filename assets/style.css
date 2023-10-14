@@ -38,6 +38,11 @@
   src: url("../assets/fonts/unb_pro_light.otf");
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -255,6 +260,7 @@ input[type=submit]:hover {
 .white{
     width: 100%;
     padding: 3%;
+    padding-bottom: 5%;
     padding-left: 20%;
 }
 
@@ -300,7 +306,7 @@ input[type=submit]:hover {
     margin-top: -1%;
 }
 
-#programDisc{
+.programDisc{
     font-size: 20px;
     font-family: thinkPs;
 }
@@ -311,7 +317,8 @@ input[type=submit]:hover {
     'top2 top2 top2'
     'sideOne middle sideTwo';
   gap: 5%;
-  padding: 10px;
+  padding-right: 5%;
+  padding-bottom: 2%;
   width: 70%;
 }
 
@@ -374,11 +381,11 @@ hr.solid {
   background-color: #008CBA;
   color: white;
   border: 2px solid #008CBA;
-  border-radius: 9px;
+  border-radius: 8px;
   height: 10%;
   width: 30%;
   padding: 1px;
-  font-size: 14px;
+  
   text-align: center;
 }
 
@@ -455,7 +462,7 @@ img {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
   }
-  
+
   /* Header/logo Title */
   .header {
     display: flex;
@@ -464,6 +471,7 @@ img {
 
     background-color: blue; /* For browsers that do not support gradients */
     background-image: linear-gradient(to bottom right, #A9CAF9, #6F947D);
+    width: auto;
     
     color: white;
     height: 25vh;
@@ -560,17 +568,20 @@ img {
     font-family: think;
   }
   
-  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+ 
   @media screen and (max-width: 700px) {
     .row {   
       flex-direction: column;
     }
   }
   
-  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+   /*
+  Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other 
   @media screen and (max-width: 400px) {
     .navbar a {
       float: none;
       width: 100%;
     }
   }
+
+  */
