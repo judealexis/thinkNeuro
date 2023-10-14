@@ -38,6 +38,53 @@
   src: url("../assets/fonts/unb_pro_light.otf");
 }
 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #94B8CC;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #4a8ee2;
+}
+
+.subContainer {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.whiteThree{
+  width: 100%;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+#contactHeader{
+  font-size: 20px;
+  text-align: left;
+  font-family: thinkLight;
+}
+
+.contactFields{
+  font-size: 15px;
+  font-family: thinkP;
+}
+
 .titleSection{
   height: 20%;
   width: 20%;
@@ -503,7 +550,14 @@ img {
   .footer {
     padding: 20px;
     text-align: center;
-    background: #ddd;
+    background-color: blue; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, #A9CAF9, #6F947D);
+  }
+
+  #copyright{
+    color:whitesmoke;
+    font-size: 20px;
+    font-family: think;
   }
   
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
