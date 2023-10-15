@@ -35,7 +35,7 @@ function fitContent(){
     
     const element = learnMore[i];
     let learnMoresize = (16 * Math.log10(element.offsetWidth/207))+16;
-    element.style.fontSize = learnMoresize.toString() + "px";
+    element.style.fontSize = (learnMoresize+1).toString() + "px";
     if(i>0){element.style.fontSize = (learnMoresize).toString() + "px";}
   }
 
