@@ -20,6 +20,10 @@ const cardP = document.getElementsByClassName("cardP");
 const cardPemphasis = document.getElementsByClassName("cardPemphasis"); 
 const cardImages = document.getElementsByClassName("cardImages"); 
 
+const cardHeader = document.getElementsByClassName("cardHeaders");
+
+const removeClass = document.querySelector("#removeClass");
+
 const root = document.documentElement;
 
 function fitContent(){
@@ -32,7 +36,7 @@ function fitContent(){
     const element = learnMore[i];
     let learnMoresize = (16 * Math.log10(element.offsetWidth/207))+16;
     element.style.fontSize = learnMoresize.toString() + "px";
-    if(i>0){element.style.fontSize = (learnMoresize+5).toString() + "px";}
+    if(i>0){element.style.fontSize = (learnMoresize).toString() + "px";}
   }
 
   bodyContainer.style.width = (viewportWidth < 1300) ? "100%" : "70%";
@@ -46,6 +50,8 @@ function fitContent(){
   if(viewportWidth < 1400){
 
     let headerPsize = 23 * (viewportWidth/1400);
+    let cardHeaderSize = 30 * (viewportWidth/1400);
+
     let headerSize = headerPsize * (17/23);
     let secHeaderSize = headerPsize * (20/23);
 
@@ -63,6 +69,11 @@ function fitContent(){
 
     titleFour.style.fontSize = (secHeaderSize >= 12) ? (secHeaderSize.toString() + "px") : "12px";
 
+    for (let i = 0; i < cardHeader.length; i++) {
+      const element = cardHeader[i];
+      element.style.fontSize = (cardHeaderSize.toString() + "px");
+    }
+
     for (let i = 0; i < programDisc.length; i++) {
       const element = programDisc[i];
       element.style.fontSize = (secHeaderSize >= 12) ? (secHeaderSize.toString() + "px") : "12px";
@@ -72,19 +83,20 @@ function fitContent(){
       const element = cardImages[i];
 
       let picCardWidth = (.5 * (viewportWidth/1400))*100;
-      console.log(picCardWidth);
       element.style.width = (picCardWidth >= 39) ? (picCardWidth.toString() + "%") : "39%";
       element.style.height = (picCardWidth >= 39) ? (picCardWidth.toString() + "%") : "39%";
     }
 
     for (let i = 0; i < cardP.length; i++) {
       const element = cardP[i];
-      const element1 = cardPemphasis[i];
+      element.style.fontSize = (secHeaderSize >= 7) ? (secHeaderSize.toString() + "px") : "7px";
+      
+    }
 
+    for (let i = 0; i < cardPemphasis.length; i++) {
+      const element = cardPemphasis[i];
       let emphasisSize = 15 * (secHeaderSize/20);
-
-      element.style.fontSize = (secHeaderSize >= 12) ? (secHeaderSize.toString() + "px") : "12px";
-      element1.style.fontSize = (emphasisSize >= 9) ? (emphasisSize.toString() + "px") : "9px";
+      element.style.fontSize = (emphasisSize >= 5) ? (emphasisSize.toString() + "px") : "5px";
     }
 
     secP.style.fontSize = (headerPsize >= 10) ? (headerPsize.toString() + "px") : "10px";
@@ -96,6 +108,11 @@ function fitContent(){
     secHeader.style.fontSize = "20px";
     titleFour.style.fontSize = "20px";
     ourProjects.style.fontSize = "20px";
+
+    for (let i = 0; i < cardHeader.length; i++) {
+      const element = cardHeader[i];
+      element.style.fontSize = "30px";
+    }
 
     for (let i = 0; i < programDisc.length; i++) {
       const element = programDisc[i];
@@ -111,13 +128,22 @@ function fitContent(){
 
     for (let i = 0; i < cardP.length; i++) {
       const element = cardP[i];
-      const element1 = cardPemphasis[i];
       element.style.fontSize = "20px";
-      element1.style.fontSize = "15px";
+    }
+
+    for (let i = 0; i < cardPemphasis.length; i++) {
+      const element = cardPemphasis[i];
+      element.style.fontSize = "15px";
     }
 
     pic1.style.width = "340px";
     pic1.style.height = "440px";
+  }
+
+  if(viewportWidth < 500){
+    removeClass.className = "deleted";
+  } else{
+    removeClass.className = "body-container";
   }
 }
 

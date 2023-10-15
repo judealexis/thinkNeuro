@@ -282,6 +282,7 @@ padding: 3%;
 
 #cardHeader{
 position: absolute;
+font-size: 30px;
 }
 
 
@@ -320,6 +321,12 @@ text-align: center;
 padding: 5px 0;
 font-size: 30px;
 }
+
+.deleted > div {
+  text-align: center;
+  padding: 5px 0;
+  font-size: 30px;
+  }
 
 #shrink{
   width: 80%;
