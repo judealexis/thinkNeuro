@@ -38,6 +38,100 @@ font-family: thinkSlick;
 src: url("../assets/fonts/unb_pro_light.otf");
 }
 
+#projectSubHeader{
+  font-family: thinkSlick;
+  font-size: "13px";
+}
+#projectP{
+  font-family: thinkP;
+  font-size: "17px";
+}
+
+.project-card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2%;
+  padding: 2%;
+  border-radius: 8px;
+  display: flex;
+  width: 60%;
+}
+
+.project-card img {
+  max-width: 30%;  /* Adjust as needed */
+  object-fit: cover;
+  border-radius: 5px;
+  border: 5px solid lightblue;
+  margin-right: 20px;
+}
+
+.project-content {
+  flex: 1;
+}
+
+.project-card h2 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  margin-bottom: 15px;
+}
+
+.project-card a {
+  display: inline-block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.project-card a:hover {
+  background-color: #0056b3;
+}
+
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 60%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active2, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\2304';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active2:after {
+  content: "\2303";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 58%;
+}
+
 .team-card {
   display: flex;
   align-items: center;
