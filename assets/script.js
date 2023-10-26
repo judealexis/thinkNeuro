@@ -25,15 +25,20 @@ function fitContent(){
     for (i = 0; i < sections.length; i++) {
       sections[i].style.minWidth = "490px";
     }
+
+    try {
     text.style.minWidth = "200px";
     image.src = "assets/image/stretchedDiversity.png";
+    } catch{}
 
   } else{
     for (i = 0; i < sections.length; i++) {
       sections[i].style.minWidth = "1100px";
     }
+    try {
     text.style.minWidth = "600px";
     image.src = "assets/image/diversitySketch.png";
+    }catch{}
   }
 
   if(viewportWidth < 500){} else{}
