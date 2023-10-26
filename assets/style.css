@@ -38,6 +38,10 @@ font-family: thinkSlick;
 src: url("../assets/fonts/unb_pro_light.otf");
 }
 
+.projectImage{
+  align-self: center;
+}
+
 #contactHeader {
   text-align: center;
   font-size: 24px;
@@ -81,6 +85,10 @@ src: url("../assets/fonts/unb_pro_light.otf");
   border-radius: 5px;  /* Add some rounded corners */
   border: 2px solid #3498db;
   width: fit-content;
+}
+
+.moreBtn:disabled {
+  cursor: not-allowed;    /* shows a "not allowed" cursor */
 }
 
 /* Hover effect */
@@ -154,11 +162,13 @@ src: url("../assets/fonts/unb_pro_light.otf");
   padding: 2%;
   border-radius: 8px;
   display: flex;
-  width: 60%;
+  width: 90%;
 }
 
 .project-card img {
   max-width: 30%;  /* Adjust as needed */
+  max-height: 450px;  /* Adjust as needed */
+  min-width: 200px;
   object-fit: cover;
   border-radius: 5px;
   border: 5px solid lightblue;
@@ -292,6 +302,7 @@ src: url("../assets/fonts/unb_pro_light.otf");
 .project-item {
   font-size: 30px;
   text-align: center;
+  min-width: 500px;
 }
 
 .video-container {
@@ -402,7 +413,14 @@ min-width: 1100px;
   width: 60%;
   min-width: 1100px;
   align-self: center;
-  }
+}
+
+.subContainerThree {
+  border-radius: 5px;
+  width: 100%;
+  min-width: 1100px;
+  align-self: center;
+}
 
 .whiteThree{
 width: 100%;

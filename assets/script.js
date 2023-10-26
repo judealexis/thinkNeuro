@@ -1,9 +1,26 @@
 const image = document.querySelector("#divers");
 const text = document.querySelector(".content-container");
 
+const videos = document.querySelector(".video-container");
+
 const sections = document.getElementsByName("responsiveSec");
 var acc = document.getElementsByClassName("accordion");
+
+const imgOne = document.querySelector("#imgOne");
+const imgTwo = document.querySelector("#imgTwo");
+const imgThree = document.querySelector("#imgThree");
+
+
 var i;
+
+try{
+  $(function() {
+    $(".moreBtn").tooltip({
+        items: ".moreBtn[disabled]",
+        content: "Application is closed."
+    });
+  });
+} catch{};
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
@@ -26,9 +43,15 @@ function fitContent(){
       sections[i].style.minWidth = "490px";
     }
 
+    try{
+      text.style.minWidth = "200px";
+      image.src = "assets/image/stretchedDiversity.png";
+    }catch{}
+    try{videos.style.gridTemplateColumns = "auto auto";}catch{}
     try {
-    text.style.minWidth = "200px";
-    image.src = "assets/image/stretchedDiversity.png";
+      imgOne.src = "assets/image/projOneStretch.png";
+      imgTwo.src = "assets/image/projTwoStretch.png";
+      imgThree.src = "assets/image/projThreeStretch.png";
     } catch{}
 
   } else{
@@ -39,9 +62,16 @@ function fitContent(){
     text.style.minWidth = "600px";
     image.src = "assets/image/diversitySketch.png";
     }catch{}
+    try{videos.style.gridTemplateColumns = "auto auto auto";}catch{}
+    try {
+      imgOne.src = "assets/image/projOne.png";
+      imgTwo.src = "assets/image/projTwo.png";
+      imgThree.src = "assets/image/projThree.png";
+    } catch{}
   }
 
-  if(viewportWidth < 500){} else{}
+  if(viewportWidth < 930){videos.style.gridTemplateColumns = "auto";}
+  if(viewportWidth < 500){}
 }
 
 document.addEventListener("DOMContentLoaded", fitContent);
