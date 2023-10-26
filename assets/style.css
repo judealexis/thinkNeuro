@@ -38,6 +38,106 @@ font-family: thinkSlick;
 src: url("../assets/fonts/unb_pro_light.otf");
 }
 
+#contactHeader {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subContainer p {
+  margin-bottom: 20px;
+}
+
+.contactInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.contactInfo i {
+  margin-right: 10px;
+  color: #007BFF;  /* Feel free to adjust this color */
+}
+
+.infoText {
+  font-size: 18px;
+  text-decoration: none;
+  color: inherit; /* This keeps the link color consistent with the other text */
+}
+
+.infoText:hover {
+  text-decoration: underline;
+}
+
+
+.moreBtn {
+  padding: 12px 20px;  /* Increase padding to make the button taller */
+  border: none;  /* Remove any default border */
+  background-color: #3498db;  /* Set a default background color */
+  color: white;  /* Set text color */
+  cursor: pointer;  /* Change the cursor on hover */
+  font-size: 16px;  /* Set a font size */
+  transition: background-color 0.3s;  /* Smooth transition for hover effect */
+  border-radius: 5px;  /* Add some rounded corners */
+  border: 2px solid #3498db;
+  width: fit-content;
+}
+
+/* Hover effect */
+.moreBtn:hover {
+  background-color: white; 
+  color: black; 
+}
+
+/* Adjustments for the icon to make sure it aligns well with the text */
+.fa-solid {
+  margin-left: 5px;  /* Small space between the text and the icon */
+  vertical-align: middle;  /* Align it to the middle of the text */
+}
+
+.diversity-section {
+  display: flex;
+  gap: 20px; /* space between image and content */
+  text-justify: center;
+  width: 60%;
+  min-width: 1100px;
+  margin: 0 auto; /* this will center the section */
+}
+
+.diversity-section img {
+  min-width: 100px; /* adjust this value as needed */
+  width: 100%;
+  border-radius: 15px;
+  max-width: 600px; /* adjust this value based on the maximum size you'd want */
+}
+
+.image-container {
+  flex: 0 0 40%; /* takes up equal width as the content-container */
+  justify-content: center;
+  align-self: center;
+}
+
+.image-container img {
+  max-width: 100%; /* ensures the image scales responsively */
+  height: auto;
+}
+
+.content-container {
+  flex: 1; /* takes up equal width as the image-container */
+  min-width: 600px;/* ensures it doesn't grow too large */
+}
+
+#revisedHeader{
+  font-size: 17px;
+  font-family: thinkLight;
+}
+
+#revisedBody{
+  font-size: 23px;
+  text-align: left;
+  font-family: thinkP;
+}
+
 #projectSubHeader{
   font-family: thinkSlick;
   font-size: "13px";
@@ -290,13 +390,20 @@ background-color: #4a8ee2;
 .subContainer {
 border-radius: 5px;
 padding: 20px;
+width: 60%;
+min-width: 1100px;
 }
 
 .whiteThree{
 width: 100%;
-padding: 1%;
 display: flex;
 justify-content: center;
+}
+
+.whiteFour{
+  width: 100%;
+  padding: 3%;
+  padding-left: 20%;
 }
 
 #contactHeader{
@@ -329,7 +436,6 @@ text-align: left;
 }
 
 #firstP{
-  width: 52%;
   padding-top: 1.5%;
   margin-bottom: 10px;
   font-size: 23px;
@@ -354,10 +460,22 @@ text-align: left;
   width: 150%;
 }
 
-.white{
-    width: 100%;
-    padding: 3%;
-    padding-left: 20%;
+.white {
+  display: flex;           /* Making this a flex container */
+  justify-content: center; /* Centering children horizontally */
+  align-items: center;     /* Centering children vertically */
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: white;
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  min-width: 1100px;
+  width: 60%;
 }
 
 .grey{
@@ -365,6 +483,9 @@ text-align: left;
   width: 100%;
   padding-top: 3%;
   padding-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .whiteTwo{
@@ -422,14 +543,6 @@ text-align: left;
   font-size: 20px;
   padding-left: 5%;
   width: 30%;
-}
-
-.container57 {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  width: 60%;
-  margin: 0 auto;
 }
 
 .grid-container {

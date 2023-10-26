@@ -1,12 +1,7 @@
-const firstHeader = document.querySelector("#firstHeader");
-const secHeader = document.querySelector("#secHeader");
-const firstP = document.querySelector("#firstP");
+const image = document.querySelector("#divers");
+const text = document.querySelector(".content-container");
 
-const pic1 = document.querySelector("#pic1");
-const secP = document.querySelector("#secP");
-
-const learnMore = document.getElementsByName("learnMore");
-
+const sections = document.getElementsByName("responsiveSec");
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -26,43 +21,19 @@ function fitContent(){
 
   const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
-
-  for (let i = 0; i < learnMore.length; i++) {
-    const element = learnMore[i];
-    let learnMoresize = (20 * Math.log10(element.offsetWidth/207))+20;
-    element.style.fontSize = learnMoresize.toString() + "px";
-    if(i>0){element.style.fontSize = (learnMoresize+5).toString() + "px";}
-  }
-
-  if(viewportWidth < 1400){
-
-    let headerPsize = 23 * (viewportWidth/1400);
-    let cardHeaderSize = 30 * (viewportWidth/1400);
-
-    let headerSize = headerPsize * (17/23);
-    let secHeaderSize = headerPsize * (20/23);
-
-    let pic1Width = ((340 * (viewportWidth/1400)) >= 130) ? (340 * (viewportWidth/1400)) : 130;
-    let pic1Height = pic1Width / (340/(440));
-    
-    pic1.style.width = pic1Width.toString() + "px";
-    pic1.style.height = pic1Height.toString() + "px";
-
-    firstP.style.fontSize = (headerPsize >= 15) ? (headerPsize.toString() + "px") : "15px";
-    firstHeader.style.fontSize = (headerSize >= 12) ? (headerSize.toString() + "px") : "12px";
-
-    secHeader.style.fontSize = (secHeaderSize >= 8) ? (secHeaderSize.toString() + "px") : "8px";
-    secP.style.fontSize = (headerPsize >= 10) ? (headerPsize.toString() + "px") : "10px";
+  if(viewportWidth < 1150){
+    for (i = 0; i < sections.length; i++) {
+      sections[i].style.minWidth = "490px";
+    }
+    text.style.minWidth = "200px";
+    image.src = "assets/image/stretchedDiversity.png";
 
   } else{
-    firstP.style.fontSize = "23px";
-    secP.style.fontSize = "23px";
-
-    firstHeader.style.fontSize = "17px";
-    secHeader.style.fontSize = "20px";
-
-    pic1.style.width = "340px";
-    pic1.style.height = "440px";
+    for (i = 0; i < sections.length; i++) {
+      sections[i].style.minWidth = "1100px";
+    }
+    text.style.minWidth = "600px";
+    image.src = "assets/image/diversitySketch.png";
   }
 
   if(viewportWidth < 500){} else{}
