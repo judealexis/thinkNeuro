@@ -402,6 +402,7 @@ justify-content: center;
 
 .whiteFour{
   width: 100%;
+  min-height: 50vh;
   padding: 3%;
   padding-left: 20%;
 }

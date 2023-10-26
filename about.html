@@ -4,6 +4,7 @@
     <title>Think Neuro</title>
     <link rel="stylesheet" type="text/css" href="assets/style.css">
     <script src="https://kit.fontawesome.com/ce09040da4.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -52,7 +53,7 @@
     </div>  
 
     <div class="row">
-        
+
         <section class="white">
             <section class="title-section" name="responsiveSec">
                 <p1 id="firstHeader" >OUR TEAM</br></p1>
@@ -68,268 +69,33 @@
 
             <h3>Founders</h3> 
 
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/MY.jfif" alt="Team Member's Name">
-                    <h2>Michael Yan</h2>
-                    <p>Chief Executive Officer</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Michael is a second-year undergraduate at the University of California, Berkeley studying Molecular and Cellular Biology with a minor in Public Policy. With professional interests in politics and health economics, he aims to pursue a career in health policy and clinical research as a physician-economist. As the CEO of Think Neuro, he aims to democratize health information at the grassroots level, drive structural change within healthcare and Medicare policy, and forge intergenerational communities by connecting with populations often overlooked in the education space, particularly children of uninsured, low-income, and limited-English proficiency (LEP) households. Outside of academics, Michael enjoys golfing on weekday mornings and sing-songwriting as a true tenor.
-                    </p>
-                </div>
-            </div>
+            <div id="founder">
 
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/sabat.JPG" alt="Team Member's Name">
-                    <h2>Lalita Sabat</h2>
-                    <p>Chief Operating Officer</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Lalita is a third year undergraduate student at Virginia Commonwealth University/ VCU School of Medicine majoring in Biology with a minor in Chemistry. She is a student in the BS/MD program aiming to become a physician. Outside of academics, Lalita is a dancer on her college Bollywood Fusion Dance Team. She has performed at various regional competitions in Alabama and North Carolina winning second place at both. She is also a research assistant in the Department of Biology - Neurobiology. She has presented abstracts at the Virginia Collegiate Honors Council (VCHC) and the Central Virginia Society of  Neuroscience. In addition, she has a wide array of expertise in a variety of healthcare environments. With a passion for volunteering in her community, she uses her free time to give back to the communities that have bolstered her growth. This includes volunteering at the soup kitchen at her University and as a tutor at her University’s Campus Learning Center.
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/BL.jpg" alt="Team Member's Name">
-                    <h2>Briana Lay</h2>
-                    <p>Board President</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Briana is a third-year undergraduate student at UCLA majoring in Human Biology and Society, an interdisciplinary major that intersects the social sciences and life sciences. She is passionate about finding ways on how environmental health overlaps with personal health and discovering solutions for its adverse effects. She currently serves as a Khmer Outreach, Retention, and Education Director where she manages outreach and mentorship efforts at Long Beach Unified School District. She is also a research assistant for a  cognition lab, finance director at Bruins Public Health, department volunteer at UCLA Health, and an Ambacebador. After her undergraduate degree, she has plans to pursue public health and medicine. Outside of school, she loves going on hikes, meeting new people, and trying new restaurants. 
-                    </p>
-                </div>
             </div>
 
             <h3>Executive Board</h3>
 
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/JT.jpg" alt="Team Member's Name">
-                    <h2>Jasmine Tai</h2>
-                    <p>Chief of Staff</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Jasmine is an undergraduate student at the University of California, Berkeley double majoring in Molecular Cell Biology and Psychology. She is passionate about healthcare and hopes to go into the biotechnology or pharmaceutical industry. Jasmine is currently a research assistant at University of California, San Francisco and has been a health worker for University Health Services in the past. She is also a student mentor for elementary students through the Sage Mentorship program. Outside of academics, Jasmine enjoys golfing and exploring the Bay.
-                    </p>
-                </div>
-            </div>
+            <div id="board">
 
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/MF.jpeg" alt="Team Member's Name">
-                    <h2>Matthew Fok</h2>
-                    <p>Chief of Outreach</p>
+                <div class="team-card">
+                    <div class="team-info">
+                        <img src="assets/image/MY.jfif" alt="Team Member's Name">
+                        <h2>Michael Yan</h2>
+                        <p>Chief Executive Officer</p>
+                    </div>
+                    <div class="team-description">
+                        <p id="personnelDisc">
+                            Michael is a second-year undergraduate at the University of California, Berkeley studying Molecular and Cellular Biology with a minor in Public Policy. With professional interests in politics and health economics, he aims to pursue a career in health policy and clinical research as a physician-economist. As the CEO of Think Neuro, he aims to democratize health information at the grassroots level, drive structural change within healthcare and Medicare policy, and forge intergenerational communities by connecting with populations often overlooked in the education space, particularly children of uninsured, low-income, and limited-English proficiency (LEP) households. Outside of academics, Michael enjoys golfing on weekday mornings and sing-songwriting as a true tenor.
+                        </p>
+                    </div>
                 </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Matthew is a second-year undergraduate student at UCI majoring in biology. He is interested in life sciences and hopes to explore more on biotech and medical research. He is currently a clinical researcher at the UCI medical center in Orange where he conducts patient chart reviews and monitors patients in a neuro-ICU using spectroscopy devices to measure tissue oxygenation activity. He hopes to one day pursue a career in medicine. In his free time, Matthew enjoys swimming and going out to eat with friends. 
-                    </p>
-                </div>
-            </div>
 
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/Nicole-Nakama.jpeg" alt="Team Member's Name">
-                    <h2>Nicole Nakama</h2>
-                    <p>Chief of Education</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Nicole is a second-year undergraduate student studying Neuroscience at UCLA. She is passionate about neuropsychology as well as the public policy surrounding various health disparities seen across the U.S. as well as developing solutions for such which has been her main drive for pursuing a career in medicine and public health. She is currently working under the Clinical and Translational Center at UCLA with other physicians and administration aiding in various projects and tasks geared towards the division and UCLA Health as a whole, a virtual tutor to a few elementary-aged students in various school districts across Southern California, and a medical scribe down in Long Beach, CA. Outside of school, Nicole also enjoys weightlifting, being outdoors, reading, journaling, and traveling. 
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/isabella.jpg" alt="Team Member's Name">
-                    <h2>Isabela Gonzalez</h2>
-                    <p>Chief of Legal Affairs</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Isabela is a second-year undergraduate student studying Psychology and Legal Studies at the University of California Berkeley. She is interested in human interaction and behavior as well as the roles of the human mind within the branches of our law. She aspires to one day become an Immigration Lawyer helping families gain a pathway to citizenship. Isabela joined Think Neuro because of her love of the environment and people. In her free time, Isabela loves binging Netflix movies, writing poetry, and drawing.
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/TC.jpg" alt="Team Member's Name">
-                    <h2>Tiffany Cheng</h2>
-                    <p>Chief of Design</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Tiffany is a second year undergraduate at the University of California Berkeley studying Dance and Performance Studies and Media Studies with a concentration in digital media. She aspires to connect with others through the arts in all forms. She has worked as a freelance graphic designer throughout all of high school, and held many club board positions doing graphic design. In her free time, Tiffany loves to dance, sing, and eat ramyeon. 
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/CT.jpg" alt="Team Member's Name">
-                    <h2>Cody Tran</h2>
-                    <p>Chief of Data</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Cody is a current second year undergraduate at UC Berkeley majoring in Chemical Biology and minoring in Nutritional Sciences. In the future, Cody strives to involve himself within pharmaceutical research and medicinal chemistry. Currently, he has involved himself within the Albrecht Lab in the Department of Pharmaceutical Sciences at UC Irvine where he studies lysosomal activity and its corresponding effects with different drugs through utilizing western blotting, gel electrophoresis, and other methods. Additionally, he is currently working in the Moore Lab in the Department of Nutritional Sciences and Toxicology at UC Berkeley, where he utilizes similar methods such as western blotting in order to study the role of nuclear receptors within crucial processes in the human body. In his free time, Cody enjoys working out, doing karaoke with friends, and shoutcasting for UC Berkeley’s competitive esports club.
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/FH.jpg" alt="Team Member's Name">
-                    <h2>Fengyi Huang</h2>
-                    <p>Chief of Finance</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Fengyi is a second year undergraduate at the University of California, Berkeley, studying Computer Science and Applied Mathematics. He is also the project coordinator under Professor David Levine for ChatCHW, an AI chatbot intended to help community health workers in less fortunate countries. While not directly related to Neuroscience, Fengyi is very interested in the field and is currently learning more about it. Fengyi plans on attending graduate school for a Master’s in Computer Science as well as working on a business, and hopes to pursue a MBA as well in the future. He hopes that in the future, he is able to use his knowledge of Computer Science and Business to make a positive impact on the world. Outside of school, Fengyi loves all forms of outdoor activities, socializing with people, and working on personal projects.
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/jude.jpg" alt="Team Member's Name">
-                    <h2>Jude Alexis</h2>
-                    <p>Chief of Technology</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet consectetur adipiscing elit duis tristique sollicitudin. Gravida quis blandit turpis cursus in. Lacus suspendisse faucibus interdum posuere lorem. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a. Scelerisque varius morbi enim nunc. Viverra suspendisse potenti nullam ac. Rhoncus aenean vel elit scelerisque mauris. Hac habitasse platea dictumst quisque sagittis purus. Duis at tellus at urna condimentum. Vitae turpis massa sed elementum tempus egestas.
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/JY.jpg" alt="Team Member's Name">
-                    <h2>Jimin Yoo</h2>
-                    <p>Chief of Public Relations</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Jimin Yoo is a second year undergraduate student at UC Berkeley studying Molecular Cell Biology and hoping to pursue a career in the field of medicine. She is passionate about cancer research as well as various health disparities present in the United States. Currently, she works at the Chen Lab at the UC Berkeley School of Optometry where she assists in mice experiments and image analysis to treat lymphatic diseases. She also provides mentoring for elementary students under the SAGE mentoring program as an executive board member. In her free time, Jimin loves meeting new people, trying new restaurants, singing, and traveling. 
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/FK.PNG" alt="Team Member's Name">
-                    <h2>Fatima Khan Lookmanji</h2>
-                    <p>Chief of Research</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Fatima Khan Lookmanji is an enthusiastic senior biology student and science devotee pursuing an Honours Bachelor of Sciences in Life Sciences, specializing in Biological Sciences and minoring in Forensic Psychology at the University of Ontario Institute of Technology. As President of the Pre-Medical Club and Pre-Dental Club, she actively engages in these roles, alongside her involvement in aquatic management and extensive volunteering across charitable and research organizations in Canada. Fatima aspires to continue her altruistic journey through further studies in medicine and research. Her dedication shines through her contributions to projects like Think Neuro, combining her love for science and research innovation. Evidencing remarkable academic performance and a profound interest in scientific progress, she aims to explore clinical research's potential in unveiling disorder mechanisms and societal impacts. An advocate for science communication and education, Fatima engages in community events and volunteer work, aiming to instill a passion for science and healthcare in young minds. Complementing her pursuits, she enjoys coaching sports, reading self-care literature, and embarking on travel adventures.
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/DB.jpg" alt="Team Member's Name">
-                    <h2>Dhruva Bhat</h2>
-                    <p>Chief of Conferences</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Dhruva Bhat is a junior at Foothill High School, with a passion for neuroscience and community service. He hopes to pursue a career within the field of medicine and is currently president of the Neuroscience club at his school. His passion for making an impact within his community has led him to participate in various volunteering opportunities, including at Kaiser Permanente and the American Cancer Society. Along with this, he has a passion for research and innovation and you can frequently find him building various contraptions. During his free time, Dhruva participates in Model United Nations, debating the global health issues and prominence of disparities within our society. He also loves to spend time with his friends, watch action movies, and drink boba.
-                    </p>
-                </div>
             </div>
 
             <h3>Comittee Chairs</h3>
 
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/AJ.png" alt="Team Member's Name">
-                    <h2>Avinna Jain</h2>
-                    <p>Professional Development Chair </p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Avinna is a junior studying Molecular and Cell Biology with a concentration in Neurobiology at University of California, Berkeley. She is also the Academic chair in the campus organization Gender Equity in Math, which promotes underrepresented groups to find a place in math and foster their academic success. Avinna plans to go to medical school to obtain an M.D. She enjoys reading, biking, and doing puzzles in her free time. 
-                    </p>
-                </div>
-            </div>
+            <div id="chair">
 
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/Anirudh-Yarlagadda.jpg" alt="Team Member's Name">
-                    <h2>Anirudh Yarlagadda</h2>
-                    <p>Community Service Chair</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Anirudh is a second year undergraduate at the University of California, Berkeley, studying Business Administration and Molecular and Cell Biology and concentrating in Neurobiology. He is passionate about combining medicine with business and finding innovative ways to make medicine more accessible to everyone. Anirudh works as a clinical and administrative assistant at Six Corners Same Day Surgeries in Chicago, Illinois. Additionally, he is an undergraduate researcher at the Bhattacharya Lab at the University of California, San Francisco where he studies the treatment of pulmonary diseases with the use of macrophages. Outside of academics, Anirudh is in the California Marching Band where he plays both brass and percussion instruments. In his free time, Anirudh enjoys playing and watching sports, mainly football, volleyball, and cricket. After gaining his degree, Anirudh plans to get an MD as well as an MBA in healthcare management. 
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/PT.jpg" alt="Team Member's Name">
-                    <h2>Prongha Talukder</h2>
-                    <p>Curriculum Chair </p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Prongha is a rising second year student at the University of California, Berkeley, studying Molecular and Cellular Biology, with a concentration in Neurobiology. He is passionate about public health and mental health research and has done work with research groups focusing on the spread of Covid and mental health legislation in India. He is also passionate about public service and is part of the Berkeley Project and Berkeley Blood Pressure Project where he serves the greater Berkeley community. He plans to pursue an M.D after his degree. He loves badminton, biking, the outdoors, and hanging out with friends.
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/veronica.jpg" alt="Team Member's Name">
-                    <h2>Veronica Uy</h2>
-                    <p>Philanthropy Chair</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Veronica is a rising third year at University of California, berkeley majoring in Molecular and Cell Biology. She is passionate about medicine and the humanities (such as art, history, literature, and language). She has done previous work as the head of fundraising for multiple organizations like activist group Generation Up and has volunteered for organizations like the Red Cross. Veronica is planning to pursue a career in medicine while practicing her other passions such as drawing, writing, and travel in the meantime. 
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/AA.jpg" alt="Team Member's Name">
-                    <h2>Amara Ajon</h2>
-                    <p>Ambassador Chair</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Amara is a rising third year at UCLA majoring in psychobiology. She is extremely passionate about mental health and cognition, and currently serves as a Research Assistant for the UCLA Stress Lab — where she is a part of the consent team for an ongoing clinical research study about how childhood ACEs affect stress resilience. Besides her involvement in Think Neuro, she also volunteers at Cedars-Sinai Medical Center, works as a certified medical assistant, and holds leadership positions in other pre-medical clubs on campus. In the future, she plans to pursue a career in medicine but for now she spends her free time reading, hiking, driving, and reviewing restaurants as part of the Yelp Elite.
-                    </p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <img src="assets/image/SP.jpg" alt="Team Member's Name">
-                    <h2>Shree Parekh</h2>
-                    <p>Recruitment Chair</p>
-                </div>
-                <div class="team-description">
-                    <p id="personnelDisc">
-                        Shree is a rising second year undergraduate at UC Berkeley, currently majoring in Molecular and Cell Biology with an emphasis in Neurobiology, along with intended major in Psychology. She has an ongoing passion for the medical field within Neurology and is interested in pursuing pediatrics, putting higher concentration on mental health. Since highschool, she has been advocating for vape prevention and mental health awareness to youth elementary schools by hosting presentations. Shree currently does research in a cognitive neuroscience lab called D’Esposito Lab at UC Berkeley, where she studies the impact of working memory in EEG scans and actively conducts a study. In the fall, Shree will start volunteering at UCSF, with hopes to work in the neonatal department! Away from academics, Shree loves to dance, sew, and spend quality time with her little siblings!
-                    </p>
-                </div>
             </div>
     
         </section>
@@ -342,5 +108,6 @@
     </div>
 
     <script src="assets/script.js"></script>
+    <script src="assets/populater.js"></script>
 </body>
 </html>
