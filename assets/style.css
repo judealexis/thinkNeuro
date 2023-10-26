@@ -264,6 +264,7 @@ src: url("../assets/fonts/unb_pro_light.otf");
 .team-info h2 {
   font-size: 24px;
   margin: 0;
+  text-align: center;
 }
 
 #personnelDisc{
@@ -274,6 +275,7 @@ src: url("../assets/fonts/unb_pro_light.otf");
 .team-info p {
   margin: 0;
   color: #777;
+  text-align: center;
 }
 
 .team-description {
