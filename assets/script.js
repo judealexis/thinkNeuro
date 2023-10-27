@@ -14,12 +14,14 @@ const imgThree = document.querySelector("#imgThree");
 var i;
 
 try{
+
   $(function() {
     $(".moreBtn").tooltip({
         items: ".moreBtn[disabled]",
         content: "Application is closed."
     });
   });
+
 } catch{};
 
 for (i = 0; i < acc.length; i++) {
