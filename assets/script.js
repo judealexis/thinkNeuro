@@ -10,6 +10,8 @@ const imgOne = document.querySelector("#imgOne");
 const imgTwo = document.querySelector("#imgTwo");
 const imgThree = document.querySelector("#imgThree");
 
+const showMoreBtns = document.getElementsByClassName('seeMoreBtn');
+
 
 var i;
 
@@ -23,6 +25,31 @@ try{
   });
 
 } catch{};
+
+try{
+  for (i = 0; i < showMoreBtns.length; i++) {
+    const showMoreBtn = showMoreBtns[i];
+    
+    showMoreBtn.addEventListener('click', function() {
+      const contentDiv = showMoreBtn.parentNode.childNodes[4];
+      
+      // Check the current style of the content div
+      if (contentDiv.style.maxHeight === '220px' || contentDiv.style.maxHeight === '') {
+          contentDiv.style.maxHeight = '1000px';
+          contentDiv.classList.add('no-gradient');
+          this.innerHTML = 'See Less';
+          
+      } else {
+          // If content is expanded, collapse it
+          contentDiv.style.maxHeight = '220px';
+          contentDiv.classList.remove('no-gradient');
+          // Change the button text back to "See More"
+          this.innerHTML = 'See More';
+      }
+    });
+    
+  }
+}catch{};
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
@@ -62,13 +89,13 @@ function fitContent(){
     }
     try {
     text.style.minWidth = "600px";
-    image.src = "assets/image/diversitySketch.png";
+    image.src = "assets/image/mission.jpeg";
     }catch{}
     try{videos.style.gridTemplateColumns = "auto auto auto";}catch{}
     try {
-      imgOne.src = "assets/image/projOne.png";
-      imgTwo.src = "assets/image/projTwo.png";
-      imgThree.src = "assets/image/projThree.png";
+      imgOne.src = "assets/image/lit.jpg";
+      imgTwo.src = "assets/image/opioid.jpg";
+      imgThree.src = "assets/image/lang.jpg";
     } catch{}
   }
 

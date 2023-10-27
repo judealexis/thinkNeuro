@@ -179,6 +179,46 @@ src: url("../assets/fonts/unb_pro_light.otf");
   flex: 1;
 }
 
+
+
+.collapse{
+  position: relative; 
+  max-height: 220px; /* Adjust this based on how much content you want to show initially */
+  overflow: hidden;
+  transition: max-height .5s;
+}
+
+.collapse::after {
+  content: '';          /* Empty content for the pseudo-element */
+  position: absolute;   /* Absolute positioning to place it at the bottom of the .project-content */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;         /* Adjust the height for more or less blur effect */
+  background: linear-gradient(to top, white, transparent); /* Fading effect */
+  pointer-events: none; /* Ensures the gradient doesn't interfere with any clickable elements */
+}
+
+.no-gradient::after {
+  background: none;
+}
+
+.seeMoreBtn {
+  display: block;       /* Makes it a block element */
+  margin: 10px auto;    /* Auto margins on left/right to center the button and 20px margin on top/bottom for spacing */
+  padding: 5px 15px;    /* Adjust padding for size */
+  background-color: #007BFF;  /* Button color */
+  color: white;         /* Text color */
+  border: none;         /* No border */
+  border-radius: 50px;  /* High value to make it circular on edges */
+  cursor: pointer;      /* Hand cursor on hover */
+  transition: background-color 0.3s; /* Smooth color transition on hover */
+}
+
+.seeMoreBtn:hover {
+  background-color: #0056b3; /* Darker shade of blue on hover */
+}
+
 .project-card h2 {
   font-size: 24px;
   margin-top: 0;
@@ -632,7 +672,7 @@ padding: 20px 0;
   #copyright{
     color:whitesmoke;
     font-size: 20px;
-    font-family: think;
+    font-family: 'Times New Roman', Times, serif;
   }
 
   html, body {
