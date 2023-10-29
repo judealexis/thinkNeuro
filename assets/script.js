@@ -29,7 +29,7 @@ try{
 try{
   for (i = 0; i < showMoreBtns.length; i++) {
     const showMoreBtn = showMoreBtns[i];
-    
+
     showMoreBtn.addEventListener('click', function() {
       const contentDiv = showMoreBtn.parentNode.childNodes[4];
       
@@ -99,8 +99,15 @@ function fitContent(){
     } catch{}
   }
 
-  if(viewportWidth < 930){videos.style.gridTemplateColumns = "auto";}
-  if(viewportWidth < 500){}
+  if(viewportWidth < 930){
+    try{videos.style.gridTemplateColumns = "auto";}
+  catch{};}
+  if(viewportWidth < 500){
+    for (i = 0; i < sections.length; i++) {
+      sections[i].style.minWidth = "95%";
+    }
+    try{}catch{};
+  }
 }
 
 document.addEventListener("DOMContentLoaded", fitContent);

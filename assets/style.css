@@ -333,6 +333,65 @@ src: url("../assets/fonts/unb_pro_light.otf");
   padding-left: 40px;
 }
 
+.team-card-one {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 1%;
+  border-radius: 8px;
+  min-width: 1100px;
+  width: 70%;
+}
+
+.team-info-one {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.team-info-one img {
+  width: 100px;
+  height: 100px;
+  font-family: thinkSmart;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.team-info-one h2 {
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  align-self: center;
+}
+
+.team-info-one p {
+  margin: 0;
+  color: #777;
+  text-align: center;
+  align-self: center;
+}
+
+#nameStacks{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: start;
+}
+
+
 .project-container {
   display: grid;
   grid-template-columns: auto auto;
@@ -356,7 +415,10 @@ src: url("../assets/fonts/unb_pro_light.otf");
   font-size: 30px;
   text-align: center;
 }
-
+#utube{
+  width: 350px;
+  height: 250px;
+}
 .navbar {
   overflow: hidden;
   background-color: #333;
@@ -659,7 +721,9 @@ padding: 20px 0;
     font-family: think;
   }
 
-
+  #contactDisc{
+    font-size: 17px;
+  }
 
 /* Footer */
 .footer {
@@ -678,4 +742,57 @@ padding: 20px 0;
   html, body {
     max-width: 100%;
     overflow-x: hidden;
+  }
+
+  @media (max-width: 500px) {
+    #title {
+      font-size: 5.5vw; 
+    }
+    #logo{
+      width: 18.5vw;
+    }
+    .header{
+      height: 45vw;
+    }
+    #firstHeader, #revisedHeader{
+      font-size: 3.65vw;
+    }
+    #firstP{
+      font-size: 4.65vw;
+    }
+    #revisedBody{
+      font-size: 4.65vw;
+      max-width: 50vw;
+    }
+    .moreBtn {
+      font-size: 3.3vw;
+      padding: 2vw 3vw;
+    }
+    #contactHeader{
+      font-size: 4vw;
+    }
+    .infoText {
+      font-size: 3.7vw;
+    }
+    #contactDisc{
+      font-size: 3.5vw;
+    }
+    #copyright{
+      font-size: 4vw;
+    }
+    .navbar a {
+      font-size: 3.3vw;
+      padding: 14px 3.3vw;
+    }
+    .dropdown .dropbtn{
+      font-size: 3.3vw;
+    }
+    .dropdown-content{
+      min-width: 30vw;
+    }
+
+    #utube{
+      width: 84vw;
+      height: 60vw;
+    }
   }
