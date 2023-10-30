@@ -11,6 +11,7 @@ const imgTwo = document.querySelector("#imgTwo");
 const imgThree = document.querySelector("#imgThree");
 
 const showMoreBtns = document.getElementsByClassName('seeMoreBtn');
+const projectContainer = document.getElementsByClassName('project-container');
 
 
 var i;
@@ -73,9 +74,16 @@ function fitContent(){
     }
 
     try{
+      for (i = 0; i < projectContainer.length; i++) {
+        projectContainer[i].style.gridTemplateColumns = "auto";
+      }
+    }catch{};
+
+    try{
       text.style.minWidth = "200px";
       image.src = "assets/image/stretchedDiversity.png";
     }catch{}
+
     try{videos.style.gridTemplateColumns = "auto auto";}catch{}
     try {
       imgOne.src = "assets/image/projOneStretch.png";
@@ -87,6 +95,13 @@ function fitContent(){
     for (i = 0; i < sections.length; i++) {
       sections[i].style.minWidth = "1100px";
     }
+
+    try{
+      for (i = 0; i < projectContainer.length; i++) {
+        projectContainer[i].style.gridTemplateColumns = "auto auto";
+      }
+    }catch{};
+
     try {
     text.style.minWidth = "600px";
     image.src = "assets/image/mission.jpeg";

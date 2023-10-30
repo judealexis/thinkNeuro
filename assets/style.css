@@ -396,12 +396,13 @@ src: url("../assets/fonts/unb_pro_light.otf");
   display: grid;
   grid-template-columns: auto auto;
   width: 65%;
-  
 }
+
 .project-item {
   font-size: 30px;
   text-align: center;
   min-width: 500px;
+  margin-bottom: 5px;
 }
 
 .video-container {
@@ -417,6 +418,10 @@ src: url("../assets/fonts/unb_pro_light.otf");
 }
 #utube{
   width: 350px;
+  height: 250px;
+}
+#pdfPoster{
+  width: 500px;
   height: 250px;
 }
 .navbar {
@@ -744,6 +749,8 @@ padding: 20px 0;
     overflow-x: hidden;
   }
 
+
+
   @media (max-width: 500px) {
     #title {
       font-size: 5.5vw; 
@@ -790,9 +797,12 @@ padding: 20px 0;
     .dropdown-content{
       min-width: 30vw;
     }
-
     #utube{
       width: 84vw;
+      height: 60vw;
+    }
+    #pdfPoster{
+      width: 90vw;
       height: 60vw;
     }
   }
