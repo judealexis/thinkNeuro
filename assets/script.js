@@ -13,7 +13,8 @@ const imgThree = document.querySelector("#imgThree");
 const showMoreBtns = document.getElementsByClassName('seeMoreBtn');
 const projectContainer = document.getElementsByClassName('project-container');
 
-
+var myListenerMain = [];
+var myListenerSub = [];
 var i;
 
 try{
@@ -27,30 +28,75 @@ try{
 
 } catch{};
 
-try{
-  for (i = 0; i < showMoreBtns.length; i++) {
-    const showMoreBtn = showMoreBtns[i];
-
-    showMoreBtn.addEventListener('click', function() {
-      const contentDiv = showMoreBtn.parentNode.childNodes[4];
-      
-      // Check the current style of the content div
-      if (contentDiv.style.maxHeight === '220px' || contentDiv.style.maxHeight === '') {
-          contentDiv.style.maxHeight = '1000px';
-          contentDiv.classList.add('no-gradient');
-          this.innerHTML = 'See Less';
+function expand(showMoreBtn){
+  return (event) => {
+    const contentDiv = showMoreBtn.parentNode.childNodes[4];
           
-      } else {
-          // If content is expanded, collapse it
-          contentDiv.style.maxHeight = '220px';
-          contentDiv.classList.remove('no-gradient');
-          // Change the button text back to "See More"
-          this.innerHTML = 'See More';
-      }
-    });
-    
+    if (contentDiv.style.maxHeight === '220px' || contentDiv.style.maxHeight === '') {
+      contentDiv.style.maxHeight = '1000px';
+      contentDiv.classList.add('no-gradient');
+      this.innerHTML = 'See Less';
+    } else {
+      // If content is expanded, collapse it
+      contentDiv.style.maxHeight = '220px';
+      contentDiv.classList.remove('no-gradient');
+      // Change the button text back to "See More"
+      this.innerHTML = 'See More';
+    }
+  };
+}
+
+function showModal(modal){
+  return (event) => {
+    modal.style.display = "block";
   }
-}catch{};
+}
+
+function assignment(width){
+  try{
+    if(width > 500){
+      myListenerMain = [];
+      for (i = 0; i < showMoreBtns.length; i++) {
+        
+        const showMoreBtn = showMoreBtns[i];
+
+        try{showMoreBtn.removeEventListener('click', myListenerSub[i]);}catch{};
+
+        myListenerMain.push(expand(showMoreBtn));
+        showMoreBtn.addEventListener('click', myListenerMain[i]);
+        
+      }
+    } else{
+      myListenerSub = [];
+  
+      for (i = 0; i < showMoreBtns.length; i++) {
+
+        const btn = showMoreBtns[i];
+        const modal = btn.parentNode.childNodes[6];
+        var span = modal.childNodes[1].childNodes[1];
+
+
+        try{btn.removeEventListener('click', myListenerMain[i]);}catch{};
+
+        myListenerSub.push(showModal(modal));
+        btn.addEventListener('click', myListenerSub[i]);
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      }
+    }
+    
+  }catch{};
+}
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
@@ -67,6 +113,7 @@ for (i = 0; i < acc.length; i++) {
 function fitContent(){
 
   const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  assignment(viewportWidth);
 
   if(viewportWidth < 1150){
     for (i = 0; i < sections.length; i++) {

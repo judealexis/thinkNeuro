@@ -40,6 +40,15 @@ src: url("../assets/fonts/unb_pro_light.otf");
 
 .projectImage{
   align-self: center;
+
+  max-width: 30%;  /* Adjust as needed */
+  max-height: 450px;  /* Adjust as needed */
+  min-width: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 5px solid lightblue;
+  margin-right: 20px;
+
 }
 
 #contactHeader {
@@ -158,21 +167,11 @@ src: url("../assets/fonts/unb_pro_light.otf");
 .project-card {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2%;
+  margin-bottom: 3%;
   padding: 2%;
   border-radius: 8px;
   display: flex;
-  width: 90%;
-}
-
-.project-card img {
-  max-width: 30%;  /* Adjust as needed */
-  max-height: 450px;  /* Adjust as needed */
-  min-width: 200px;
-  object-fit: cover;
-  border-radius: 5px;
-  border: 5px solid lightblue;
-  margin-right: 20px;
+  width: 95%;
 }
 
 .project-content {
@@ -180,10 +179,9 @@ src: url("../assets/fonts/unb_pro_light.otf");
 }
 
 
-
 .collapse{
   position: relative; 
-  max-height: 220px; /* Adjust this based on how much content you want to show initially */
+  max-height: 300px; /* Adjust this based on how much content you want to show initially */
   overflow: hidden;
   transition: max-height .5s;
 }
@@ -242,6 +240,41 @@ src: url("../assets/fonts/unb_pro_light.otf");
 .project-card a:hover {
   background-color: #0056b3;
 }
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 
 .accordion {
@@ -320,6 +353,7 @@ src: url("../assets/fonts/unb_pro_light.otf");
 #personnelDisc{
   font-family: thinkFast;
   line-height: 110%;
+  padding: 1%;
 }
 
 .team-info p {
@@ -343,7 +377,7 @@ src: url("../assets/fonts/unb_pro_light.otf");
   padding: 1%;
   border-radius: 8px;
   min-width: 1100px;
-  width: 70%;
+  width: 90%;
 }
 
 .team-info-one {
@@ -753,10 +787,10 @@ padding: 20px 0;
 
   @media (max-width: 500px) {
     #title {
-      font-size: 5.5vw; 
+      font-size: 5vw; 
     }
     #logo{
-      width: 18.5vw;
+      width: 18vw;
     }
     .header{
       height: 45vw;
@@ -804,5 +838,11 @@ padding: 20px 0;
     #pdfPoster{
       width: 90vw;
       height: 60vw;
+    }
+    .projectImage{
+      min-width: 20vw;
+    }
+    .project-item {
+      min-width: 100vw;
     }
   }
