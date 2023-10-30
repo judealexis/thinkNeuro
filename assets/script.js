@@ -73,6 +73,8 @@ function assignment(width){
 
         const btn = showMoreBtns[i];
         const modal = btn.parentNode.childNodes[6];
+
+        const modalContent = modal.childNodes[1];
         var span = modal.childNodes[1].childNodes[1];
 
 
@@ -88,10 +90,12 @@ function assignment(width){
         
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
+          if (event.target.getAttribute("class") == "modal") {
+            event.target.style.display = "none";
           }
         }
+
+        
       }
     }
     
