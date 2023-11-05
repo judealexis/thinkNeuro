@@ -132,14 +132,14 @@ function fitContent(){
 
     try{
       text.style.minWidth = "200px";
-      image.src = "assets/image/stretchedDiversity.png";
+      image.src = "assets/image/missionStretch.jpeg";
     }catch{}
 
     try{videos.style.gridTemplateColumns = "auto auto";}catch{}
     try {
-      imgOne.src = "assets/image/projOneStretch.png";
-      imgTwo.src = "assets/image/projTwoStretch.png";
-      imgThree.src = "assets/image/projThreeStretch.png";
+      imgOne.src = "assets/image/projOneStretch.jpg";
+      imgTwo.src = "assets/image/projTwoStretch.jpg";
+      imgThree.src = "assets/image/projThreeStretch.jpg";
     } catch{}
 
   } else{
