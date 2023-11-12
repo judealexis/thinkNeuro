@@ -38,6 +38,48 @@ font-family: thinkSlick;
 src: url("../assets/fonts/unb_pro_light.otf");
 }
 
+#testimonialPics {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 0.5s ease;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.carousel-dots {
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
 .projectImage{
   align-self: center;
 
@@ -632,6 +674,7 @@ text-align: left;
 
 .white {
   display: flex;           /* Making this a flex container */
+  flex-direction: column;
   justify-content: center; /* Centering children horizontally */
   align-items: center;     /* Centering children vertically */
   width: 100%;
@@ -786,6 +829,10 @@ padding: 20px 0;
 
 
   @media (max-width: 500px) {
+    #testimonialPics {
+      width: 70vw;
+      height: 70vw;
+    }
     #title {
       font-size: 5vw; 
     }
