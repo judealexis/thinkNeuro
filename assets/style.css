@@ -136,6 +136,7 @@ src: url("../assets/fonts/unb_pro_light.otf");
   border-radius: 5px;  /* Add some rounded corners */
   border: 2px solid #3498db;
   width: fit-content;
+  text-decoration:none;
 }
 
 .moreBtn:disabled {
