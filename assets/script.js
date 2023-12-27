@@ -10,6 +10,10 @@ const imgOne = document.querySelector("#imgOne");
 const imgTwo = document.querySelector("#imgTwo");
 const imgThree = document.querySelector("#imgThree");
 
+const imageTwo = document.getElementsByClassName("sponsImg");
+
+const imageContainer = document.querySelector("#spacedLogos");
+
 const showMoreBtns = document.getElementsByClassName('seeMoreBtn');
 const projectContainer = document.getElementsByClassName('project-container');
 
@@ -134,6 +138,11 @@ function fitContent(){
     try{
       text.style.minWidth = "200px";
       image.src = "assets/image/missionStretch.jpeg";
+      imageContainer.style.flexDirection = "column";
+      for (i = 0; i < imageTwo.length; i++) {
+        imageTwo[i].style.maxHeight = "50px";
+        imageTwo[i].style.maxWidth = "200px";
+      }
     }catch{}
 
     try{videos.style.gridTemplateColumns = "auto auto";}catch{}
@@ -157,6 +166,11 @@ function fitContent(){
     try {
     text.style.minWidth = "600px";
     image.src = "assets/image/mission.jpeg";
+    imageContainer.style.flexDirection = "row";
+    for (i = 0; i < imageTwo.length; i++) {
+      imageTwo[i].style.maxHeight = "70px";
+      imageTwo[i].style.maxWidth = "none";
+    }
     }catch{}
     try{videos.style.gridTemplateColumns = "auto auto auto";}catch{}
     try {

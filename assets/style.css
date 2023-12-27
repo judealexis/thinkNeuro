@@ -612,6 +612,13 @@ display: flex;
 justify-content: center;
 }
 
+.greyMod{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f2f2f2;
+  }
+
 .whiteFour{
   width: 100%;
   min-height: 50vh;
@@ -682,6 +689,43 @@ text-align: left;
   padding-top: 3%;
   padding-bottom: 3%;
   background-color: white;
+}
+
+.whiteSpons {
+  display: flex;           /* Making this a flex container */
+  flex-direction: column;
+  justify-content: center; /* Centering children horizontally */
+  align-items: center;     /* Centering children vertically */
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: white;
+}
+
+.sponsImg{
+  min-height: 10px; /* adjust this value as needed */
+  height: 100%;
+  border-radius: 15px;
+  max-height: 70px; /* adjust this value based on the maximum size you'd want */
+  margin-bottom: 10px;
+}
+
+#titleSection{
+  justify-content: left;
+}
+
+#spacedLogos{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logoHeader{
+  font-size: 17px;
+  text-align: left;
+  font-family: thinkLight;
+  margin-bottom: 10px;
 }
 
 .title-section {
@@ -843,7 +887,7 @@ padding: 20px 0;
     .header{
       height: 45vw;
     }
-    #firstHeader, #revisedHeader{
+    #firstHeader, #revisedHeader, #logoHeader{
       font-size: 3.65vw;
     }
     #firstP{
