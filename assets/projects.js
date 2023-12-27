@@ -85,7 +85,7 @@ function populateDiv(mobile){
                 <div class="project-content">
                     <h2>${item.title}</h2>
                     <p id="projectP">
-                        <div class="collapse">
+                        <div class="collapse" id="noselect">
                             <b id ="projectSubHeader">BACKGROUND</b></br>
                             ${item.background}</p>
                             
@@ -98,14 +98,16 @@ function populateDiv(mobile){
                         <div id="myModal${item.id}" class="modal" onclick="closeModal(${item.id}, event)">
                             <div class="modal-content">
                             <span id="closeModal${item.id}" class="close">&times;</span>
-                            <h2>Childrens Neurologic Literature</h2>
-                            <p id="projectP">
+                            <h2>${item.title}</h2>
+                            <p id="projectP" class="noselect">
                                 <b id ="projectSubHeader">BACKGROUND</b></br>
                                 ${item.background}</p>
                                 <b id ="projectSubHeader">DESCRIPTION</b></br>
                                 ${item.description}</p>
 
-                                ${processText(item.rawText)}
+                                <div class="noselect">
+                                    ${processText(item.rawText)}
+                                </div>
                             </p>
                             </div>
                         </div>

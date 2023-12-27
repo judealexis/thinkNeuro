@@ -284,6 +284,12 @@ src: url("../assets/fonts/unb_pro_light.otf");
   background-color: #0056b3;
 }
 
+#noselect, .noselect {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard syntax */
+}
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
