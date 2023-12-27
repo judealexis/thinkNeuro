@@ -6,10 +6,6 @@ const videos = document.querySelector(".video-container");
 const sections = document.getElementsByName("responsiveSec");
 var acc = document.getElementsByClassName("accordion");
 
-const imgOne = document.querySelector("#imgOne");
-const imgTwo = document.querySelector("#imgTwo");
-const imgThree = document.querySelector("#imgThree");
-
 const imageTwo = document.getElementsByClassName("sponsImg");
 
 const imageContainer = document.querySelector("#spacedLogos");
@@ -33,80 +29,6 @@ try{
 
 } catch{};
 
-function expand(showMoreBtn){
-  return (event) => {
-    const contentDiv = showMoreBtn.parentNode.childNodes[4];
-          
-    if (contentDiv.style.maxHeight === '220px' || contentDiv.style.maxHeight === '') {
-      contentDiv.style.maxHeight = '1000px';
-      contentDiv.classList.add('no-gradient');
-      this.innerHTML = 'See Less';
-    } else {
-      // If content is expanded, collapse it
-      contentDiv.style.maxHeight = '220px';
-      contentDiv.classList.remove('no-gradient');
-      // Change the button text back to "See More"
-      this.innerHTML = 'See More';
-    }
-  };
-}
-
-function showModal(modal){
-  return (event) => {
-    modal.style.display = "block";
-  }
-}
-
-function assignment(width){
-  try{
-    if(width > 500){
-      myListenerMain = [];
-      for (i = 0; i < showMoreBtns.length; i++) {
-        
-        const showMoreBtn = showMoreBtns[i];
-
-        try{showMoreBtn.removeEventListener('click', myListenerSub[i]);}catch{};
-
-        myListenerMain.push(expand(showMoreBtn));
-        showMoreBtn.addEventListener('click', myListenerMain[i]);
-        
-      }
-    } else{
-      myListenerSub = [];
-  
-      for (i = 0; i < showMoreBtns.length; i++) {
-
-        const btn = showMoreBtns[i];
-        const modal = btn.parentNode.childNodes[6];
-
-        const modalContent = modal.childNodes[1];
-        var span = modal.childNodes[1].childNodes[1];
-
-
-        try{btn.removeEventListener('click', myListenerMain[i]);}catch{};
-
-        myListenerSub.push(showModal(modal));
-        btn.addEventListener('click', myListenerSub[i]);
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-          modal.style.display = "none";
-        }
-        
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-          if (event.target.getAttribute("class") == "modal") {
-            event.target.style.display = "none";
-          }
-        }
-
-        
-      }
-    }
-    
-  }catch{};
-}
-
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active2");
@@ -122,7 +44,6 @@ for (i = 0; i < acc.length; i++) {
 function fitContent(){
 
   const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-  assignment(viewportWidth);
 
   if(viewportWidth < 1150){
     for (i = 0; i < sections.length; i++) {
@@ -146,11 +67,6 @@ function fitContent(){
     }catch{}
 
     try{videos.style.gridTemplateColumns = "auto auto";}catch{}
-    try {
-      imgOne.src = "assets/image/projOneStretch.jpg";
-      imgTwo.src = "assets/image/projTwoStretch.jpg";
-      imgThree.src = "assets/image/projThreeStretch.jpg";
-    } catch{}
 
   } else{
     for (i = 0; i < sections.length; i++) {
@@ -173,11 +89,6 @@ function fitContent(){
     }
     }catch{}
     try{videos.style.gridTemplateColumns = "auto auto auto";}catch{}
-    try {
-      imgOne.src = "assets/image/lit.jpg";
-      imgTwo.src = "assets/image/opioid.jpg";
-      imgThree.src = "assets/image/lang.jpg";
-    } catch{}
   }
 
   if(viewportWidth < 930){
