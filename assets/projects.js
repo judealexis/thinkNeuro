@@ -83,7 +83,7 @@ function populateDiv(mobile){
             <div class="project-card">
                 <img class="projectImage" src="assets/image/projects/${imgName}.jpg" alt="Project ${item.id} Title">
                 <div class="project-content">
-                    <h2>${item.title}</h2>
+                    <h2 id="noselect">${item.title}</h2>
                     <p id="projectP">
                         <div class="collapse" id="noselect">
                             <b id ="projectSubHeader">BACKGROUND</b></br>
@@ -98,7 +98,7 @@ function populateDiv(mobile){
                         <div id="myModal${item.id}" class="modal" onclick="closeModal(${item.id}, event)">
                             <div class="modal-content">
                             <span id="closeModal${item.id}" class="close">&times;</span>
-                            <h2>${item.title}</h2>
+                            <h2 id="noselect">${item.title}</h2>
                             <p id="projectP" class="noselect">
                                 <b id ="projectSubHeader">BACKGROUND</b></br>
                                 ${item.background}</p>
@@ -158,6 +158,11 @@ function fitContent(){
     mobile = (viewportWidth) < 750;
     populateDiv(mobile);
 }
+
+document.addEventListener('copy', (event) => {
+    event.clipboardData.setData('text/plain', '');
+    event.preventDefault(); // This prevents the default copy functionality.
+});
 
 document.addEventListener("DOMContentLoaded", fitContent);
 window.addEventListener("resize", fitContent);

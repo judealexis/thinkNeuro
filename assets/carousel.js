@@ -4,6 +4,22 @@ const itemCount = items.length;
 const delay = 5000;
 let nextNow = 0;
 
+const carousel = document.querySelector('.carousel');
+const leftBtn = document.querySelector('#leftBtn');
+const rightBtn = document.querySelector('#rightBtn');
+
+leftBtn.addEventListener("click", function() {
+  currentIndex--
+  cycleItems();
+  updateDots();
+});
+
+rightBtn.addEventListener("click", function() {
+  currentIndex++
+  cycleItems();
+  updateDots();
+});
+
 function cycleItems() {
   const itemToShow = Math.abs(currentIndex % itemCount);
   items.forEach((item, index) => {
@@ -23,7 +39,6 @@ function createDots() {
       currentIndex = parseInt(this.getAttribute('data-index'));
       cycleItems();
       updateDots();
-      resetAutoplay();
     };
     dotsContainer.appendChild(dot);
   }
@@ -57,8 +72,6 @@ createDots();
 // Start Autoplay
 let autoplayInterval = setInterval(autoplay, delay);
 
-const carousel = document.querySelector('.carousel');
-
 carousel.addEventListener('mouseenter', () => {
   console.log("in");
   nextNow = Date.now();
@@ -68,12 +81,14 @@ carousel.addEventListener('mouseenter', () => {
 carousel.addEventListener('mouseleave', () => {
   console.log("out");
   
-  if((Date.now() - nextNow) >= 5000){
+  if((Date.now() - nextNow) >= 4000){
     currentIndex++;
     cycleItems();
     autoplayInterval = setInterval(autoplay, delay);
   } else{
-    setTimeout(function(){
+    clearInterval(autoplayInterval);
+    try{ clearTimeout(timeoutId); }catch{}
+    timeoutId = setTimeout(() => {
       currentIndex++;
       cycleItems();
       autoplayInterval = setInterval(autoplay, delay);
