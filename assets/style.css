@@ -739,11 +739,19 @@ text-align: left;
   margin-bottom: 10px;
 }
 
+.testImg{
+  min-height: 10px; /* adjust this value as needed */
+  width: 100%;
+  border-radius: 15px;
+  max-width: 350px; /* adjust this value based on the maximum size you'd want */
+  margin-bottom: 10px;
+}
+
 #titleSection{
   justify-content: left;
 }
 
-#spacedLogos{
+.spacedLogos{
   display: flex;
   flex-direction: row;
   align-items: center;

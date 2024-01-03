@@ -7,8 +7,9 @@ const sections = document.getElementsByName("responsiveSec");
 var acc = document.getElementsByClassName("accordion");
 
 const imageTwo = document.getElementsByClassName("sponsImg");
+const imageThree = document.getElementsByClassName("testImg");
 
-const imageContainer = document.querySelector("#spacedLogos");
+const imageContainer = document.getElementsByClassName("spacedLogos");
 
 const showMoreBtns = document.getElementsByClassName('seeMoreBtn');
 const projectContainer = document.getElementsByClassName('project-container');
@@ -59,11 +60,20 @@ function fitContent(){
     try{
       text.style.minWidth = "200px";
       image.src = "assets/image/missionStretch.jpeg";
-      imageContainer.style.flexDirection = "column";
+
+      for (i = 0; i < imageContainer.length; i++) {
+        imageContainer[i].style.flexDirection = "column";
+      }
+
       for (i = 0; i < imageTwo.length; i++) {
         imageTwo[i].style.maxHeight = "50px";
         imageTwo[i].style.maxWidth = "200px";
       }
+
+      for (i = 0; i < imageThree.length; i++) {
+        imageThree[i].style.maxWidth = "300px";
+      }
+
     }catch{}
 
     try{videos.style.gridTemplateColumns = "auto auto";}catch{}
@@ -82,11 +92,20 @@ function fitContent(){
     try {
     text.style.minWidth = "600px";
     image.src = "assets/image/mission.jpeg";
-    imageContainer.style.flexDirection = "row";
+
+    for (i = 0; i < imageContainer.length; i++) {
+      imageContainer[i].style.flexDirection = "row";
+    }
+
     for (i = 0; i < imageTwo.length; i++) {
       imageTwo[i].style.maxHeight = "70px";
       imageTwo[i].style.maxWidth = "none";
     }
+
+    for (i = 0; i < imageThree.length; i++) {
+      imageThree[i].style.maxWidth = "350px";
+    }
+
     }catch{}
     try{videos.style.gridTemplateColumns = "auto auto auto";}catch{}
   }
