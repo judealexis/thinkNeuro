@@ -641,11 +641,11 @@ display: flex;
 justify-content: center;
 }
 
-.greyMod{
+.whiteMod{
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: #f2f2f2;
+  background-color: white;
   }
 
 .whiteFour{
@@ -720,6 +720,8 @@ text-align: left;
   background-color: white;
 }
 
+/*background-color: #f2f2f2;*/
+
 .whiteSpons {
   display: flex;           /* Making this a flex container */
   flex-direction: column;
@@ -729,6 +731,17 @@ text-align: left;
   padding-top: 3%;
   padding-bottom: 3%;
   background-color: white;
+}
+
+.greyTest {
+  display: flex;           /* Making this a flex container */
+  flex-direction: column;
+  justify-content: center; /* Centering children horizontally */
+  align-items: center;     /* Centering children vertically */
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  background-color: #f2f2f2;
 }
 
 .sponsImg{
