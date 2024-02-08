@@ -641,11 +641,11 @@ display: flex;
 justify-content: center;
 }
 
-.whiteMod{
+.greyMod{
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: #f2f2f2;
   }
 
 .whiteFour{
@@ -733,7 +733,7 @@ text-align: left;
   background-color: white;
 }
 
-.greyTest {
+.whiteTest {
   display: flex;           /* Making this a flex container */
   flex-direction: column;
   justify-content: center; /* Centering children horizontally */
@@ -741,7 +741,7 @@ text-align: left;
   width: 100%;
   padding-top: 3%;
   padding-bottom: 3%;
-  background-color: #f2f2f2;
+  background-color: white;
 }
 
 .sponsImg{
