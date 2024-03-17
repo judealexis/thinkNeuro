@@ -38,6 +38,254 @@ font-family: thinkSlick;
 src: url("../assets/fonts/unb_pro_light.otf");
 }
 
+.ctaBtn {
+  padding: 5px 70px;  /* Increase padding to make the button taller */
+  border: none;  /* Remove any default border */
+  background-color: #809ABF;  /* Set a default background color */
+  color: white;  /* Set text color */
+  cursor: pointer;  /* Change the cursor on hover */
+  font-size: 20px;  /* Set a font size */
+  font-family: thinkP;
+  transition: background-color 0.3s;  /* Smooth transition for hover effect */
+  border-radius: 20px;  /* Add some rounded corners */
+  border: 2px solid #809ABF;
+  width: fit-content;
+  text-decoration:none;
+  margin: 0 auto;
+}
+
+/* Hover effect */
+.ctaBtn:hover {
+  background-color: white; 
+  color: #809ABF; 
+}
+
+.standardReact{
+  width: 50%;
+  min-width: 1100px;
+}
+
+.compareBody{
+  display: grid;
+  grid-template-columns: auto auto; 
+  justify-content: space-between;
+  padding-bottom: 10px;
+  width: 50%;
+  min-width: 900px;
+  margin: 0 auto; /* this will center the section */
+}
+
+.compareBody > div {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+#compareImage {
+  object-fit: contain;
+  height: auto;
+  border-radius: 15px;
+  max-width: 500px;
+  max-height: 300px;
+}
+
+#news-hook {
+  display: flex;
+  text-justify: center;
+  align-content: center;
+  justify-content: center;
+  padding-bottom: 30px;
+  margin: 0 auto; /* this will center the section */
+}
+
+#news-hookMOD {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  margin: 0 auto; /* this will center the section */
+}
+
+#news-cta {
+  display: flex;
+  flex-direction: column;
+  text-justify: center;
+  align-content: center;
+  justify-content: center;
+  margin: 0 auto; /* this will center the section */
+}
+
+#newsTitleTxt{
+  font-size: 35px;
+  text-align: center;
+}
+
+#newsTitleTxtCTA{
+  font-size: 35px;
+  text-align: center;
+}
+
+.newsCTASec{
+  background-color: #19304C;
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.newsContSec{
+  background-color: #f2f2f2;
+  width: 100%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.opposed-image-container {
+  display: flex;
+  align-content: center;
+  flex: 0 0 40%; /* takes up equal width as the content-container */
+  justify-content: center;
+  align-self: center;
+}
+
+.opposed-image-container img {
+  max-width: 80%; /* ensures the image scales responsively */
+  height: auto;
+}
+
+.opposed-content-container {
+  display: flex;
+  flex: 1; /* takes up equal width as the image-container */
+  min-width: 600px;/* ensures it doesn't grow too large */
+  align-items: center;
+  text-align: center;
+}
+
+#opposed-image {
+  display: flex;
+  gap: 20px; /* space between image and content */
+  text-justify: center;
+  margin: 0 auto; /* this will center the section */
+}
+
+.imageTxt-right{
+  font-size: 30px;
+  text-align: right;
+}
+
+.imageTxt-left{
+  font-size: 30px;
+  text-align: left;
+}
+
+#compareHeader{
+  text-align: left;
+  font-size: 30px;
+}
+
+#compareHeader-title{
+  font-family: thinkSmart;
+  font-size: 35px;
+  color:#809ABF;
+}
+
+#compareColumnTxt{
+  text-align: left;
+  margin-top: 30px;
+  font-family: thinkSmart;
+  font-size: 25px;
+  color:#809ABF;
+}
+
+#listOfOptions{
+  text-align: left;
+  font-size: 20px;
+  font-family: thinkPs;
+}
+
+#number{
+  font-family: thinkSmart;
+  color:#809ABF;
+}
+
+#lightTxt{
+  font-family: thinkSmart;
+  color:#ABCDFF;
+}
+
+#whiteTxt{
+  font-family: think;
+  color:white;
+}
+
+#titleP{
+  font-family: thinkSlick;
+}
+
+#normalP{
+  font-family: thinkPs;
+}
+
+#emphP{
+  font-family: think;
+}
+
+#newsHeaderBG {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: blue; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #294464, #19304C);
+  
+  color: white;
+  height: 25vh;
+}
+
+#newsHeader{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#newsTitle{
+  font-size: 35px;
+  font-family: think;
+  color: #ABCDFF;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#newsTitleParent{
+  font-size: 20px;
+}
+
+#newsSubtitle{
+  font-family: ThinkLight;
+  color: white;
+  margin-bottom: 5px;
+}
+
+#subEmph{
+  font-family: ThinkHard;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.textSandwich{
+  display: flex;
+  flex-direction: row;
+}
+
 #testimonialPics {
   width: 350px;
   height: 350px;
@@ -147,6 +395,9 @@ src: url("../assets/fonts/unb_pro_light.otf");
   text-decoration: underline;
 }
 
+#linkBtn{
+  width: fit-content;
+}
 
 .moreBtn {
   padding: 12px 20px;  /* Increase padding to make the button taller */
@@ -162,14 +413,14 @@ src: url("../assets/fonts/unb_pro_light.otf");
   text-decoration:none;
 }
 
-.moreBtn:disabled {
-  cursor: not-allowed;    /* shows a "not allowed" cursor */
-}
-
 /* Hover effect */
 .moreBtn:hover {
   background-color: white; 
   color: black; 
+}
+
+.moreBtn:disabled {
+  cursor: not-allowed;    /* shows a "not allowed" cursor */
 }
 
 /* Adjustments for the icon to make sure it aligns well with the text */
@@ -921,9 +1172,124 @@ padding: 20px 0;
     overflow-x: hidden;
   }
 
+  /* .imageTxt-right{
+    font-size: 2.7vw;
+  }
+  .imageTxt-left{
+    font-size: 2.7vw;
+  } */
 
+  @media (max-width: 1150px) {
+    .opposed-content-container{
+      min-width: 50vw;
+    }
+    .standardReact{
+      min-width: 800px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .standardReact{
+      min-width: 500px;
+    }
+    .ctaBtn{
+      font-size: 15px;
+    }
+    #newsTitleTxt{
+      font-size: 25px;
+    }
+    #compareHeader-title{
+      font-size: 25px;
+    }
+    #newsTitleTxtCTA{
+      font-size: 20px;
+    }
+    .imageTxt-right{
+      font-size: 20px;
+    }
+    .imageTxt-left{
+      font-size: 20px;
+    }
+    #compareHeader{
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 930px) {
+    .compareBody{
+      min-width: 600px;
+    }
+    .compareBody > div{
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .compareBody{
+      min-width: 400px;
+    }
+    .compareBody > div{
+      width: 200px;
+    }
+    #compareColumnTxt{
+      font-size: 20px;
+    }
+    #listOfOptions{
+      font-size: 15px;
+    }
+    #compareImage{
+      width: 150px;
+    }
+  }
+
+  @media (max-width: 630px) {
+    #newsTitle{
+      font-size: 5.5vw;
+    }
+    #newsTitleTxt{
+      font-size: 15px;
+    }
+    .ctaBtn{
+      font-size: 10px;
+    }
+    #compareHeader-title{
+      font-size: 20px;
+    }
+  }
 
   @media (max-width: 500px) {
+    .compareBody{
+      min-width: 300px;
+    }
+    .compareBody > div{
+      width: 150px;
+    }
+    #compareColumnTxt{
+      font-size: 15px;
+    }
+    #listOfOptions{
+      font-size: 10px;
+    }
+    #compareImage{
+      width: 125px;
+    }
+
+    .standardReact{
+      min-width: 300px;
+    }
+    .imageTxt-right{
+      font-size: 15px;
+    }
+    .imageTxt-left{
+      font-size: 15px;
+    }
+    #compareHeader{
+      font-size: 15px;
+    }
+
+    #newsTitleParent{
+      font-size: 4vw;
+    }
     #testimonialPics {
       width: 70vw;
       height: 70vw;
@@ -933,6 +1299,9 @@ padding: 20px 0;
     }
     #logo{
       width: 18vw;
+    }
+    #newsHeaderBG{
+      height: 55vw;
     }
     .header{
       height: 45vw;
