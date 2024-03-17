@@ -38,6 +38,66 @@ font-family: thinkSlick;
 src: url("../assets/fonts/unb_pro_light.otf");
 }
 
+#sucessImg{
+  object-fit: contain;
+  border-radius: 15px;
+  max-width: 400px;
+  max-height: 200px;
+}
+
+#newsModalsub{
+  font-family: think;
+  font-size: 15px;
+  text-align: center;
+  color:white;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+#newsModalTitle{
+  font-family: thinkSmart;
+  font-size: 30px;
+  text-align: center;
+  color:#ABCDFF;
+  margin-bottom: -5px;
+}
+
+#newsModalsublight{
+  font-family: thinkLight;
+  font-size: 15px;
+  text-align: center;
+  color:white;
+}
+
+/* The Modal (background) */
+.modalNews {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-contentNews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #19304C;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #19304C;
+  width: 400px;
+  align-items: center;
+}
+
+
 .ctaBtn {
   padding: 5px 70px;  /* Increase padding to make the button taller */
   border: none;  /* Remove any default border */
@@ -56,6 +116,29 @@ src: url("../assets/fonts/unb_pro_light.otf");
 
 /* Hover effect */
 .ctaBtn:hover {
+  background-color: white; 
+  color: #809ABF; 
+}
+
+#submitBtn {
+  padding: 5px 50px; 
+  border: none;
+  background-color: #809ABF;
+  color: white;  /* Set text color */
+  cursor: pointer;  /* Change the cursor on hover */
+  font-size: 15px;  /* Set a font size */
+  text-align: center;
+  font-family: thinkP;
+  transition: background-color 0.3s;  /* Smooth transition for hover effect */
+  border-radius: 20px;  /* Add some rounded corners */
+  border: 2px solid #809ABF;
+  width: fit-content;
+  text-decoration:none;
+  align-self: center;
+}
+
+/* Hover effect */
+#submitBtn:hover {
   background-color: white; 
   color: #809ABF; 
 }
@@ -164,6 +247,7 @@ src: url("../assets/fonts/unb_pro_light.otf");
 
 .opposed-content-container {
   display: flex;
+  flex-direction: column;
   flex: 1; /* takes up equal width as the image-container */
   min-width: 600px;/* ensures it doesn't grow too large */
   align-items: center;
@@ -212,6 +296,12 @@ src: url("../assets/fonts/unb_pro_light.otf");
   font-family: thinkPs;
 }
 
+#successTitleOne{
+  font-family: thinkSmart;
+  color:#809ABF;
+  font-size: 25px;
+}
+
 #number{
   font-family: thinkSmart;
   color:#809ABF;
@@ -249,6 +339,18 @@ src: url("../assets/fonts/unb_pro_light.otf");
   
   color: white;
   height: 25vh;
+}
+
+#newsHeaderBGSuc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: blue; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #294464, #19304C);
+  
+  color: white;
+  height: 35vh;
 }
 
 #newsHeader{
@@ -1299,6 +1401,13 @@ padding: 20px 0;
     }
     #logo{
       width: 18vw;
+    }
+    #newsHeaderBGSuc{
+      height: 60vw;
+    }
+    #sucessImg{
+      width: 40vw;
+      margin-bottom: 15px;
     }
     #newsHeaderBG{
       height: 55vw;
