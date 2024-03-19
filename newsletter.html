@@ -29,15 +29,17 @@
             <p id="newsModalsublight">as a pre-health or pre-medical applicant</p>
 
             <input type="text" id="fname" name="firstname" placeholder="First Name">
-            <input type="text" id="fname" name="lastname" placeholder="Last Name">
-            <input type="text" id="fname" name="email" placeholder="Email Address">
+            <input type="text" id="lname" name="lastname" placeholder="Last Name">
+            <input type="text" id="email" name="email" placeholder="Email Address">
 
-            <select id="cars" name="cars">
-                <option value="volvo">--Education Status--</option>
-                <option value="saab">High School Student</option>
-                <option value="fiat">Undergraduate Student</option>
-                <option value="audi">Graduate</option>
+            <select id="educationStatus" name="cars">
+                <option value="blank">--Education Status--</option>
+                <option value="high">High School Student</option>
+                <option value="under">Undergraduate Student</option>
+                <option value="grad">Graduate</option>
               </select>
+
+              <p id="modalError">Error</p>
 
             <button id="submitBtn">Submit</button>
         </div>

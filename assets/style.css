@@ -69,6 +69,13 @@ src: url("../assets/fonts/unb_pro_light.otf");
   color:white;
 }
 
+#modalError{
+  display: none;
+  color: red;
+  font-family: thinkLight;
+  font-size: 10px;
+}
+
 /* The Modal (background) */
 .modalNews {
   display: none; /* Hidden by default */
