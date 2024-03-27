@@ -864,6 +864,13 @@ src: url("../assets/fonts/unb_pro_light.otf");
   width: 65%;
 }
 
+.sole-project-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 100%;
+}
+
 .project-item {
   font-size: 30px;
   text-align: center;
@@ -889,6 +896,10 @@ src: url("../assets/fonts/unb_pro_light.otf");
 #pdfPoster{
   width: 500px;
   height: 250px;
+}
+#pdfPosterJust{
+  width: 500px;
+  height: 300px;
 }
 .navbar {
   overflow: hidden;
