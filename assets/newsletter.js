@@ -16,7 +16,8 @@ var errorMessage = document.getElementById("modalError");
 
 // When the user clicks the button, open the modal 
 function openModal() {
-  modal.style.display = "block";
+  // modal.style.display = "block";
+  window.location.href = "https://think-neuro.ck.page/newsletter-signup-lp";
 }
 
 window.addEventListener('DOMContentLoaded', function() {
