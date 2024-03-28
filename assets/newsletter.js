@@ -16,7 +16,14 @@ var errorMessage = document.getElementById("modalError");
 
 // When the user clicks the button, open the modal 
 function openModal() {
-  modal.style.display = "block";
+  // modal.style.display = "block";
+  fetch("https://think-neuro.ck.page/2f8e3f1580/index.js")
+  .then(response => response.text())
+  .then(scriptText => {
+      eval(scriptText); // Not recommended due to security risks
+  })
+  .catch(error => console.error('Error loading the script: ', error));
+  
 }
 
 window.addEventListener('DOMContentLoaded', function() {
