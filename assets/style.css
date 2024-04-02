@@ -1440,7 +1440,7 @@ padding: 20px 0;
       font-size: 3.65vw;
     }
     #firstP{
-      font-size: 4.65vw !important;
+      font-size: 4.65vw;
     }
     #revisedBody{
       font-size: 4.65vw;
@@ -1489,5 +1489,10 @@ padding: 20px 0;
     }
     .project-item {
       min-width: 100vw;
+    }
+  }
+  @media (max-width: 426px) {
+    #firstP{
+      font-size: 14px;
     }
   }
