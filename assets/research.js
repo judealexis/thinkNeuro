@@ -1,4 +1,3 @@
-let posters = "";
 let posterNames = [
     "Examining Linkages of ADHD Risk Allele Dopamine Transporter Gene DAT1: A Bibliometric Analysis", 
     "Examining the Correlation Between Lifestyle Factors and the Clinical Presentation of Multiple Sclerosis",
@@ -18,29 +17,32 @@ let posterNames = [
     "Neuroimaging: Amyloid PET Scans For Alzheimer’s Diagnosis",
     "Alzheimer’s Disease",
     "Decoding Brain Waves: Machine Learning for Epilepsy Detection via EEG Scans",
-    "Universal Healthcare: Private vs. Public Systems and Policy Implementation"
+    "Universal Healthcare: Private vs. Public Systems and Policy Implementation",
+    "Nonhuman Modeling and it's Implications in Diverging Circuit Literature"
 ];
+//    <h3>${posterNames[i-1]}</h3> 
+
+let posters = `<div class="sole-project-container">`;
 
 for (i = 1; i <= posterNames.length; i++){
     posters += 
     `
-    <h3>${posterNames[i-1]}</h3> 
-    <div class="sole-project-container">
         <div class="project-item">
             <object
             data='assets/posters/2024Cohort/2024poster${i}.pdf#view=FitH'
             type="application/pdf"
-            id="pdfPoster">
+            id="pdfPosterJust">
                 <iframe
                 src='assets/posters/2024Cohort/2024poster${i}.pdf#view=FitH'
-                id="pdfPoster">
+                id="pdfPosterJust">
                     <p>This browser does not support PDF!</p>
                 </iframe>
             </object>
         </div>
-    </div>
     `
 }
+
+posters += "</div>"
 
 
 document.getElementById("insert_cohort_here").innerHTML = posters;

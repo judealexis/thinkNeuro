@@ -865,9 +865,9 @@ src: url("../assets/fonts/unb_pro_light.otf");
 }
 
 .sole-project-container {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 1%;
   width: 100%;
 }
 
@@ -1306,6 +1306,9 @@ padding: 20px 0;
     .standardReact{
       min-width: 800px;
     }
+    .sole-project-container {
+      grid-template-columns: auto;
+    }
   }
 
   @media (max-width: 850px) {
@@ -1476,6 +1479,10 @@ padding: 20px 0;
     #pdfPoster{
       width: 90vw;
       height: 60vw;
+    }
+    #pdfPosterJust{
+      width: 90vw;
+      height: 70vw;
     }
     .projectImage{
       min-width: 20vw;
