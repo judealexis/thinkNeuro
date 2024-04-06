@@ -12,7 +12,6 @@ const imageThree = document.getElementsByClassName("testImg");
 const imageContainer = document.getElementsByClassName("spacedLogos");
 
 const showMoreBtns = document.getElementsByClassName('seeMoreBtn');
-const projectContainer = document.getElementsByClassName('project-container');
 
 var myListenerMain = [];
 var myListenerSub = [];
@@ -46,64 +45,107 @@ function fitContent(){
 
   const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 
+  if(viewportWidth < 600){
+    try{
+      var content = "";
+      for(i = 1; i <= 9; i++){
+        content += `
+          <div class="carousel-item">
+            <img src="assets/image/testimonials/mainPage/${i}.png" id="testimonialPics">
+          </div>`
+      }
+      for (i = 0; i < imageContainer.length; i++) {
+        imageContainer[i].innerHTML = `
+        <div id="testimonial-carousel" class="carousel">
+                  <div id="leftBtn" class="carousel-button left">
+                      <i class="fa-solid fa-caret-left"></i>
+                  </div>
+
+                  <div class="carousel-content">
+                    ${content}
+                  </div>
+              
+                  <div id="rightBtn" class="carousel-button right">
+                      <i class="fa-solid fa-caret-right"></i>
+                  </div>
+              
+                  <div class="carousel-dots"></div>
+              </div>
+        `
+      }
+
+      console.log("begin");
+      const myEvent = new CustomEvent('carouselReady', {
+        detail: { message: 'This is a custom event' }
+      });
+      
+      window.dispatchEvent(myEvent);
+
+    } catch{}
+  } else{
+    for (i = 0; i < imageContainer.length; i++) {
+      imageContainer[i].innerHTML = `
+      <img class="testImg" src="assets/image/testimonials/mainPage/1.png" alt="Diversity Image">
+      <img class="testImg" src="assets/image/testimonials/mainPage/2.png" alt="Diversity Image">
+      <img class="testImg" src="assets/image/testimonials/mainPage/3.png" alt="Diversity Image">
+      <img class="testImg" src="assets/image/testimonials/mainPage/4.png" alt="Diversity Image">
+      <img class="testImg" src="assets/image/testimonials/mainPage/5.png" alt="Diversity Image">
+      <img class="testImg" src="assets/image/testimonials/mainPage/6.png" alt="Diversity Image">
+      <img class="testImg" src="assets/image/testimonials/mainPage/7.png" alt="Diversity Image">
+      <img class="testImg" src="assets/image/testimonials/mainPage/8.png" alt="Diversity Image">
+      <img class="testImg" src="assets/image/testimonials/mainPage/9.png" alt="Diversity Image">`
+    }
+    try{} catch{}
+  }
+
   if(viewportWidth < 1150){
+
     for (i = 0; i < sections.length; i++) {
       sections[i].style.minWidth = "490px";
     }
 
     try{
-      for (i = 0; i < projectContainer.length; i++) {
-        projectContainer[i].style.gridTemplateColumns = "auto";
+      for (i = 0; i < imageContainer.length; i++) {
+        imageContainer[i].style.minWidth = "620px";
       }
-    }catch{};
+      for (i = 0; i < imageThree.length; i++) {
+        imageThree[i].style.maxWidth = "300px";
+      }
+    }catch{}
 
     try{
       text.style.minWidth = "200px";
       image.src = "assets/image/missionStretch.jpeg";
 
-      for (i = 0; i < imageContainer.length; i++) {
-        imageContainer[i].style.flexDirection = "column";
-      }
-
       for (i = 0; i < imageTwo.length; i++) {
         imageTwo[i].style.maxHeight = "50px";
         imageTwo[i].style.maxWidth = "200px";
       }
-
-      for (i = 0; i < imageThree.length; i++) {
-        imageThree[i].style.maxWidth = "300px";
-      }
-
     }catch{}
 
-    try{videos.style.gridTemplateColumns = "auto auto";}catch{}
+    try{
+      videos.style.gridTemplateColumns = "auto auto";
+    }catch{}
 
   } else{
     for (i = 0; i < sections.length; i++) {
       sections[i].style.minWidth = "1100px";
     }
 
-    try{
-      for (i = 0; i < projectContainer.length; i++) {
-        projectContainer[i].style.gridTemplateColumns = "auto auto";
-      }
-    }catch{};
+    for (i = 0; i < imageContainer.length; i++) {
+      imageContainer[i].style.minWidth = "1100px";
+    }
+    for (i = 0; i < imageThree.length; i++) {
+      imageThree[i].style.maxWidth = "350px";
+    }
 
     try {
     text.style.minWidth = "600px";
     image.src = "assets/image/mission.jpeg";
 
-    for (i = 0; i < imageContainer.length; i++) {
-      imageContainer[i].style.flexDirection = "row";
-    }
-
     for (i = 0; i < imageTwo.length; i++) {
       imageTwo[i].style.maxHeight = "70px";
       imageTwo[i].style.maxWidth = "none";
-    }
-
-    for (i = 0; i < imageThree.length; i++) {
-      imageThree[i].style.maxWidth = "350px";
     }
 
     }catch{}
@@ -111,13 +153,26 @@ function fitContent(){
   }
 
   if(viewportWidth < 930){
-    try{videos.style.gridTemplateColumns = "auto";}
-  catch{};}
+    try{
+      videos.style.gridTemplateColumns = "auto";
+    } catch{};
+  }
+
+  if(viewportWidth < 650){
+    try{
+      for (i = 0; i < imageContainer.length; i++) {
+        imageContainer[i].style.minWidth = `${viewportWidth - 130}px`;
+      }
+      for (i = 0; i < imageThree.length; i++) {
+        imageThree[i].style.maxWidth = "200px";
+      }
+    } catch{}
+  }
+
   if(viewportWidth < 500){
     for (i = 0; i < sections.length; i++) {
       sections[i].style.minWidth = "95%";
     }
-    try{}catch{};
   }
 }
 

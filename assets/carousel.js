@@ -1,27 +1,72 @@
 let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-const itemCount = items.length;
 const delay = 5000;
 let nextNow = 0;
 
-const carousel = document.querySelector('.carousel');
-const leftBtn = document.querySelector('#leftBtn');
-const rightBtn = document.querySelector('#rightBtn');
+function initCarousel(){
 
-leftBtn.addEventListener("click", function() {
-  currentIndex--
-  cycleItems();
-  updateDots();
+  console.log("carousel init");
+
+  const carousel = document.querySelector('.carousel');
+  const leftBtn = document.querySelector('#leftBtn');
+  const rightBtn = document.querySelector('#rightBtn');
+
+  leftBtn.addEventListener("click", function() {
+    currentIndex--
+    cycleItems();
+    updateDots();
+  });
+  
+  rightBtn.addEventListener("click", function() {
+    currentIndex++
+    cycleItems();
+    updateDots();
+  });
+  
+  // Initialize carousel with dots
+  createDots();
+  
+  // Start Autoplay
+  let autoplayInterval = setInterval(autoplay, delay);
+  
+  carousel.addEventListener('mouseenter', () => {
+    console.log("in");
+    nextNow = Date.now();
+    clearInterval(autoplayInterval);
+  });
+  
+  carousel.addEventListener('mouseleave', () => {
+    console.log("out");
+    
+    if((Date.now() - nextNow) >= 4000){
+      currentIndex++;
+      cycleItems();
+      autoplayInterval = setInterval(autoplay, delay);
+    } else{
+      clearInterval(autoplayInterval);
+      try{ clearTimeout(timeoutId); }catch{}
+      timeoutId = setTimeout(() => {
+        currentIndex++;
+        cycleItems();
+        autoplayInterval = setInterval(autoplay, delay);
+      }, (5000-(Date.now() - nextNow)));
+    }
+  });
+  
+}
+
+document.addEventListener("carouselReady", initCarousel);
+
+window.addEventListener('carouselReady', function(e) {
+  console.log('Custom event received!', e.detail.message);
+  initCarousel();
 });
 
-rightBtn.addEventListener("click", function() {
-  currentIndex++
-  cycleItems();
-  updateDots();
-});
+// document.addEventListener("DOMContentLoaded", initCarousel);
 
 function cycleItems() {
-  const itemToShow = Math.abs(currentIndex % itemCount);
+  var items = document.querySelectorAll('.carousel-item');
+
+  const itemToShow = Math.abs(currentIndex % items.length);
   items.forEach((item, index) => {
     item.style.transform = `translateX(${itemToShow * -100}%)`;
   });
@@ -29,8 +74,10 @@ function cycleItems() {
 }
 
 function createDots() {
+  var items = document.querySelectorAll('.carousel-item');
   const dotsContainer = document.querySelector('.carousel-dots');
-  for (let i = 0; i < itemCount; i++) {
+
+  for (let i = 0; i < items.length; i++) {
     const dot = document.createElement('span');
     dot.classList.add('dot');
     if (i === 0) dot.classList.add('active');
@@ -45,8 +92,11 @@ function createDots() {
 }
 
 function updateDots() {
+  var items = document.querySelectorAll('.carousel-item');
   const dots = document.querySelectorAll('.dot');
-  const itemToShow = Math.abs(currentIndex % itemCount);
+
+  const itemToShow = Math.abs(currentIndex % items.length);
+
   dots.forEach((dot, index) => {
     if (index === itemToShow) {
       dot.classList.add('active');
@@ -65,33 +115,3 @@ function resetAutoplay() {
   clearInterval(autoplayInterval);
   autoplayInterval = setInterval(autoplay, delay);
 }
-
-// Initialize carousel with dots
-createDots();
-
-// Start Autoplay
-let autoplayInterval = setInterval(autoplay, delay);
-
-carousel.addEventListener('mouseenter', () => {
-  console.log("in");
-  nextNow = Date.now();
-  clearInterval(autoplayInterval);
-});
-
-carousel.addEventListener('mouseleave', () => {
-  console.log("out");
-  
-  if((Date.now() - nextNow) >= 4000){
-    currentIndex++;
-    cycleItems();
-    autoplayInterval = setInterval(autoplay, delay);
-  } else{
-    clearInterval(autoplayInterval);
-    try{ clearTimeout(timeoutId); }catch{}
-    timeoutId = setTimeout(() => {
-      currentIndex++;
-      cycleItems();
-      autoplayInterval = setInterval(autoplay, delay);
-    }, (5000-(Date.now() - nextNow)));
-  }
-});
