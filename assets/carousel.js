@@ -1,6 +1,7 @@
 let currentIndex = 0;
 const delay = 5000;
 let nextNow = 0;
+let intervals = [];
 
 function initCarousel(){
 
@@ -24,9 +25,13 @@ function initCarousel(){
   
   // Initialize carousel with dots
   createDots();
-  
+
+  intervals.forEach(id => clearInterval(id));
+  intervals = []; 
+
   // Start Autoplay
   let autoplayInterval = setInterval(autoplay, delay);
+  intervals.push(autoplayInterval);
   
   carousel.addEventListener('mouseenter', () => {
     console.log("in");
@@ -54,14 +59,14 @@ function initCarousel(){
   
 }
 
-document.addEventListener("carouselReady", initCarousel);
-
-window.addEventListener('carouselReady', function(e) {
-  console.log('Custom event received!', e.detail.message);
-  initCarousel();
-});
-
-// document.addEventListener("DOMContentLoaded", initCarousel);
+if (window.location.pathname.includes("index")){
+  window.addEventListener('carouselReady', function(e) {
+    console.log('Custom event received!', e.detail.message);
+    initCarousel();
+  });
+} else{
+  document.addEventListener("DOMContentLoaded", initCarousel);
+}
 
 function cycleItems() {
   var items = document.querySelectorAll('.carousel-item');
