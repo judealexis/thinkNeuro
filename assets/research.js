@@ -7,10 +7,10 @@ for (i = 1; i <= 21; i++){
             <object
             data='assets/posters/2024Cohort/2024poster${i}.pdf#view=FitH'
             type="application/pdf"
-            id="pdfPosterJust">
+            id="pdfPoster">
                 <iframe
                 src='assets/posters/2024Cohort/2024poster${i}.pdf#view=FitH'
-                id="pdfPosterJust">
+                id="pdfPoster">
                     <p>This browser does not support PDF!</p>
                 </iframe>
             </object>
